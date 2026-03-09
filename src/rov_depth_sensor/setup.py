@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'motor_control'
+package_name = 'rov_depth_sensor'
 
 setup(
     name=package_name,
@@ -13,18 +13,15 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='olivia',
-    maintainer_email='olivia@todo.todo',
+    maintainer='xingyue',
+    maintainer_email='yun.xi@northeastern.edu',
     description='TODO: Package description',
     license='TODO: License declaration',
-    extras_require={
-        'test': [
-            'pytest',
-        ],
-    },
+    tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'serial_bridge = motor_control.serial_bridge_node:main',
+            'depth_sensor_node = rov_depth_sensor.depth_sensor:main',
+            'ms5837 = rov_depth_senspr.ms5937:main'
         ],
     },
 )
